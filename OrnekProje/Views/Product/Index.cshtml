@@ -1,0 +1,57 @@
+﻿
+
+					@*        ModelBazlı        *@
+
+
+
+@* @model List<OrnekProje.Models.Product>
+<ul>
+
+	@foreach (var product in Model)
+	{
+		<li> 
+			@product.ProductName
+		</li>
+	}
+</ul>*@
+
+
+
+					@*        ViewBag        *@
+
+@*
+<ul>
+
+	@foreach (var product in ViewBag.product as List<OrnekProje.Models.Product>)
+	{
+		<li> 
+			@product.ProductName
+		</li>
+	}
+</ul>
+*@
+
+				   @*        ViewData        *@
+
+
+@*<ul>
+
+	@foreach (var product in ViewData["productNew"] as List<OrnekProje.Models.Product>)
+	{
+		<li> 
+			@product.ProductName
+		</li>
+	}
+</ul>*@
+
+
+				@*        TempData        *@
+<ul>
+
+	@foreach (var product in TempData["productNew"] as List<OrnekProje.Models.Product>)
+	{
+		<li> 
+			@product.ProductName
+		</li>
+	}
+</ul>
