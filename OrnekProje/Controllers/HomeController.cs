@@ -8,11 +8,11 @@ namespace OrnekProje.Controllers
         {
             return View();
         }
-        public IActionResult Index2()
+        public IActionResult Sayfa1()
         {
             return View();
         }
-        public IActionResult Index3()
+        public IActionResult Sayfa2()
         {
             return View();
         }
