@@ -1,6 +1,8 @@
-﻿namespace OrnekProje.Services
+﻿using OrnekProje.Services.Interfaces;
+
+namespace OrnekProje.Services
 {
-    public class PerformanceLog
+    public class PerformanceLog : ILog
     {
         public PerformanceLog(int a)
         {

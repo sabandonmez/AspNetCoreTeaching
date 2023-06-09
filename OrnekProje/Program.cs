@@ -1,15 +1,14 @@
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using OrnekProje.Services;
+using OrnekProje.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddSingleton<ConsoleLog>();
-builder.Services.AddScoped<TextLog>();
-builder.Services.AddTransient<PerformanceLog>(p=> new PerformanceLog(12));
+builder.Services.AddSingleton<ILog,ConsoleLog>();
 
 builder.Services.AddControllersWithViews().AddFluentValidation(x=> x.RegisterValidatorsFromAssemblyContaining<Program>());
 
@@ -40,3 +39,4 @@ app.UseEndpoints(endpoints =>
 app.MapRazorPages();
 
 app.Run();
+

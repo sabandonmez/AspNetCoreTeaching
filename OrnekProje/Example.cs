@@ -7,9 +7,9 @@ namespace OrnekProje
         public Example()
         {
             IServiceCollection services = new ServiceCollection();
-            services.Add(ServiceDescriptor(typeof(ConsoleLog) , new ConsoleLog() ));
-            services.Add(ServiceDescriptor(typeof(TextLog), new TextLog()));
-            services.Add(ServiceDescriptor(typeof(PerformanceLog), new PerformanceLog(12) ));
+            //services.Add(ServiceDescriptor(typeof(ConsoleLog) , new ConsoleLog() ));
+            //services.Add(ServiceDescriptor(typeof(TextLog), new TextLog()));
+            //services.Add(ServiceDescriptor(typeof(PerformanceLog), new PerformanceLog(12) ));
 
             ServiceProvider provider = services.BuildServiceProvider();
             provider.GetService<ConsoleLog>();

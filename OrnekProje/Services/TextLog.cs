@@ -1,6 +1,8 @@
-﻿namespace OrnekProje.Services
+﻿using OrnekProje.Services.Interfaces;
+
+namespace OrnekProje.Services
 {
-    public class TextLog
+    public class TextLog : ILog
     {
         public void Log()
         {
