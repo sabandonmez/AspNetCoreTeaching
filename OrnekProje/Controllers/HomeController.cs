@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OrnekProje.Services;
 
 namespace OrnekProje.Controllers
 {
@@ -6,6 +7,9 @@ namespace OrnekProje.Controllers
     {
         public IActionResult Index()
         {
+            TextLog log = new TextLog();
+            log.Log();
+
             return View();
         }
         public IActionResult Sayfa1()
