@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OrnekProje.Services;
+using OrnekProje.Services.Interfaces;
 
 namespace OrnekProje.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        
+        public IActionResult Index([FromServices]ILog log)
         {
-            TextLog log = new TextLog();
             log.Log();
-
+            
             return View();
         }
         public IActionResult Sayfa1()
