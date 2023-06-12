@@ -32,6 +32,18 @@ app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
+    endpoints.MapAreaControllerRoute(
+        name: "yönetimPaneliCustomRoute",
+        areaName:"yönetimPaneli",
+        pattern:"admin/{controller=Home}/{action=Index}/{id?}"
+        );
+
+    endpoints.MapAreaControllerRoute(
+        name: "faturaPaneliCustomRoute",
+        areaName: "faturaPaneli",
+        pattern: "faturabilgi/{controller=Home}/{action=Index}/{id?}"
+        );
+
     endpoints.MapControllerRoute("OrnekCustomRoute", "{controller=Home}/{action=Index}/{a}/{b}/{id}");
     endpoints.MapDefaultControllerRoute();
 });

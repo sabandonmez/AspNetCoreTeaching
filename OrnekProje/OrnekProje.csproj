@@ -14,15 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
-    <Folder Include="Areas\faturaPaneli\Controllers\" />
     <Folder Include="Areas\faturaPaneli\Data\" />
     <Folder Include="Areas\faturaPaneli\Models\" />
-    <Folder Include="Areas\faturaPaneli\Views\" />
-    <Folder Include="Areas\yönetimPaneli\Controllers\" />
     <Folder Include="Areas\yönetimPaneli\Data\" />
     <Folder Include="Areas\yönetimPaneli\Models\" />
-    <Folder Include="Areas\yönetimPaneli\Views\" />
   </ItemGroup>
 
 </Project>
